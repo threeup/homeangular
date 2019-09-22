@@ -1,18 +1,39 @@
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+/* Style the header */
+.headerbox {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  background: none;
+  color: #88ff88;
+  height: 20;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.header {
+  display: block;
+  margin-left: auto;
+  margin-right: 0;
+  width:450px;
+  height: 50px;
+  background-color: #171717;
+  color: #ddffff;
 }
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+
+li {
+  display: inline-block;
+  /* You can also add some margins here to make it look prettier */
+  zoom:1;
+  *display:inline;
+  color:#DDD;
+  /* this fix is needed for IE7- */
+}
+li a {
+  color:#DDD;
+}
+li:hover {
+  background:#E24143;
 }

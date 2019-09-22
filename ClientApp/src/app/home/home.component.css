@@ -5,3 +5,16 @@ p {
   .current-section {
     background-color: cornflowerblue
   }
+
+  drawerContainer {
+    height: '270px';
+    transform: 'translate3d(0,0,0)';
+  }
+
+  drawerContent {
+    padding: '1em';
+  }
+  
+  icon {
+    margin: '0 8px';
+  }
