@@ -10,10 +10,14 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { DragonResumeComponent } from './dragonresume/dragonresume.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
+import { ScrollSpyDirective } from './scrollspy/scrollspy.directive';
+import { LoremIpsumComponent } from './loremipsum/loremipsum.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent, 
+    ScrollSpyDirective, 
+    LoremIpsumComponent,
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
