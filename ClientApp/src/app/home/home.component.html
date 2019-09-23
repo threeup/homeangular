@@ -15,17 +15,41 @@
       [width]="width"
     >
       <ly-list>
-        <button ly-list-item>
-          <ly-icon ly-list-icon disablePadding>mail</ly-icon>
-          <span ly-line>Inbox</span>
+        <button ly-list-item (click)="scrollTo('section1')" [ngClass]="{ 'current-section': currentSection === 'section1' }">
+          <ly-icon ly-list-icon disablePadding>accessibility_new</ly-icon>
+          <span ly-line>Overview</span>
         </button>
-        <button ly-list-item>
-          <ly-icon ly-list-icon disablePadding>bookmark</ly-icon>
-          <span ly-line>Bookmark</span>
+        <button ly-list-item (click)="scrollTo('section2')" [ngClass]="{ 'current-section': currentSection === 'section2' }">
+          <ly-icon ly-list-icon disablePadding>assessment</ly-icon>
+          <span ly-line>Skills</span>
         </button>
-        <button ly-list-item>
-          <ly-icon ly-list-icon disablePadding>message</ly-icon>
-          <span ly-line>Chat</span>
+        <button ly-list-item (click)="scrollTo('section3')" [ngClass]="{ 'current-section': currentSection === 'section3' }">
+          <ly-icon ly-list-icon disablePadding>school</ly-icon>
+          <span ly-line>Education</span>
+        </button>
+        <button ly-list-item (click)="scrollTo('work1')" [ngClass]="{ 'current-section': currentSection === 'work1' }">
+          <ly-icon ly-list-icon disablePadding>filter_1</ly-icon>
+          <span ly-line>Engg @ Hardsuit</span>
+        </button>
+        <button ly-list-item (click)="scrollTo('work2')" [ngClass]="{ 'current-section': currentSection === 'work2' }">
+          <ly-icon ly-list-icon disablePadding>filter_2</ly-icon>
+          <span ly-line>Engg @ Harebrained</span>
+        </button>
+        <button ly-list-item (click)="scrollTo('work3')" [ngClass]="{ 'current-section': currentSection === 'work3' }">
+          <ly-icon ly-list-icon disablePadding>filter_3</ly-icon>
+          <span ly-line>Engg @ 343</span>
+        </button>
+        <button ly-list-item (click)="scrollTo('work4')" [ngClass]="{ 'current-section': currentSection === 'work4' }"> 
+          <ly-icon ly-list-icon disablePadding>filter_4</ly-icon>
+          <span ly-line>Engg @ Smith&Tinker</span>
+        </button>
+        <button ly-list-item (click)="scrollTo('work5')" [ngClass]="{ 'current-section': currentSection === 'work5' }">
+          <ly-icon ly-list-icon disablePadding>filter_5</ly-icon>
+          <span ly-line>Engg @ Big Bang</span>
+        </button>
+        <button ly-list-item (click)="scrollTo('work6')" [ngClass]="{ 'current-section': currentSection === 'work6' }">
+          <ly-icon ly-list-icon disablePadding>filter_6</ly-icon>
+          <span ly-line>Engg @ HB Studios</span>
         </button>
       </ly-list>
       <div [className]="classes.icon">
@@ -40,7 +64,44 @@
     </ly-drawer>
 
     <ly-drawer-content [withClass]="classes.drawerContent">
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum veritatis officiis sapiente facilis blanditiis dolor. Nobis ipsum dolorum possimus facilis consequatur aspernatur, tempora dignissimos exercitationem. Dignissimos sed expedita corrupti quos.
+      <div id="parentDiv" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)" style="height: 100vh; overflow-y: scroll;">
+        <div id="section1">
+          <a href="#section1" prevent-default="" scroll-to="section1">Overview</a><br/><br/>
+          <detailbox blob="section1"></detailbox><br/><br/>
+        </div>
+        <div id="section2">
+          <a href="#section2" prevent-default="" scroll-to="section2">Skills</a><br/><br/>
+          <detailbox blob="section2"></detailbox><br/><br/>
+        </div>
+        <div id="section3">
+          <a href="#section3" prevent-default="" scroll-to="section3">Education</a><br/><br/>
+          <detailbox blob="section3"></detailbox><br/><br/>
+        </div>
+        <div id="work1">
+          <a href="#work1" prevent-default="" scroll-to="work1">AI Engineer - Hardsuit Labs</a><br/><br/>
+          <detailbox blob="work1"></detailbox><br/><br/>
+        </div>
+        <div id="work2">
+          <a href="#work2" prevent-default="" scroll-to="work2">Engineer - Harebrained Schemes</a><br/><br/>
+          <detailbox blob="work2"></detailbox><br/><br/>
+        </div>
+        <div id="work3">
+          <a href="#work3" prevent-default="" scroll-to="work3">Engineer</a><br/><br/>
+          <detailbox blob="work3"></detailbox><br/><br/>
+        </div>
+        <div id="work4">
+          <a href="#work4" prevent-default="" scroll-to="work4">Engineer</a><br/><br/>
+          <detailbox blob="work4"></detailbox><br/><br/>
+        </div>
+        <div id="work5">
+          <a href="#work5" prevent-default="" scroll-to="work5">Engineer</a><br/><br/>
+          <detailbox blob="work5"></detailbox><br/><br/>
+        </div>
+        <div id="work6">
+          <a href="#work6" prevent-default="" scroll-to="work6">Engineer</a><br/><br/>
+          <detailbox blob="work6"></detailbox><br/><br/>
+        </div>
+      </div>  
     </ly-drawer-content>
 
   </ly-drawer-container>

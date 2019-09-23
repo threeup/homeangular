@@ -38,7 +38,7 @@ import { CounterComponent } from './counter/counter.component';
 import { DragonResumeComponent } from './dragonresume/dragonresume.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ScrollSpyDirective } from './scrollspy/scrollspy.directive';
-import { LoremIpsumComponent } from './loremipsum/loremipsum.component';
+import { DetailsComponent } from './details/details.component';
 import { LyDrawerModule } from '@alyle/ui/drawer';
 import { LyToolbarModule } from '@alyle/ui/toolbar';
 import { LyListModule } from '@alyle/ui/list';
@@ -48,7 +48,7 @@ import { LyTypographyModule } from '@alyle/ui/typography';
 import { LyIconModule } from '@alyle/ui/icon';
 
 import { ResponsiveModule } from '@alyle/ui/responsive';
-
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 @NgModule({
   providers: [
@@ -70,7 +70,7 @@ import { ResponsiveModule } from '@alyle/ui/responsive';
   declarations: [
     AppComponent, 
     ScrollSpyDirective, 
-    LoremIpsumComponent,
+    DetailsComponent,
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
@@ -89,7 +89,7 @@ import { ResponsiveModule } from '@alyle/ui/responsive';
       { path: 'dragonresume', component: DragonResumeComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
-
+    LoggerModule.forRoot({serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
     LyThemeModule.setTheme('minima-light'),
     LyDrawerModule,
     LyToolbarModule,

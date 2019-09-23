@@ -1,19 +1,21 @@
 import { Component } from '@angular/core';
 import { LyTheme2 } from '@alyle/ui';
+import { NGXLogger } from 'ngx-logger';
 
-const DEFAULT = '170px over@XSmall';
+
+const DEFAULT = '270px over@XSmall';
 const MINI = '56px over@XSmall';
 
 const STYLES = ({
   drawerContainer: {
-    height: '270px',
+    height: '800px',
     transform: 'translate3d(0,0,0)'
   },
   drawerContent: {
-    padding: '1em'
+    padding: '5px',
   },
   icon: {
-    margin: '0 8px'
+    margin: '2 8px'
   }
 });
 
@@ -21,6 +23,7 @@ const STYLES = ({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: [ './home.component.css' ],
+  providers: [NGXLogger]  
 })
 export class HomeComponent {
   readonly classes = this._theme.addStyleSheet(STYLES);
@@ -31,13 +34,21 @@ export class HomeComponent {
     return this.mini ? MINI : DEFAULT;
   }
 
-  constructor(private _theme: LyTheme2) { }
+  constructor(private _theme: LyTheme2, private logger: NGXLogger) { 
+    this.logger.log('hi');
+    this.test();
+  }
+  test() {
+    this.logger.log('test');
+  }
 
   onSectionChange(sectionId: string) {
     this.currentSection = sectionId;
+    this.logger.log(sectionId);
   }
 
   scrollTo(section) {
+    this.logger.log(section);
     document.querySelector('#' + section)
     .scrollIntoView();
   }
