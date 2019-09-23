@@ -29,27 +29,27 @@
         </button>
         <button ly-list-item (click)="scrollTo('work1')" [ngClass]="{ 'current-section': currentSection === 'work1' }">
           <ly-icon ly-list-icon disablePadding>filter_1</ly-icon>
-          <span ly-line>Engg @ Hardsuit</span>
+          <span ly-line> @ Hardsuit</span>
         </button>
         <button ly-list-item (click)="scrollTo('work2')" [ngClass]="{ 'current-section': currentSection === 'work2' }">
           <ly-icon ly-list-icon disablePadding>filter_2</ly-icon>
-          <span ly-line>Engg @ Harebrained</span>
+          <span ly-line> @ Harebrained</span>
         </button>
         <button ly-list-item (click)="scrollTo('work3')" [ngClass]="{ 'current-section': currentSection === 'work3' }">
           <ly-icon ly-list-icon disablePadding>filter_3</ly-icon>
-          <span ly-line>Engg @ 343</span>
+          <span ly-line> @ 343 Industries</span>
         </button>
         <button ly-list-item (click)="scrollTo('work4')" [ngClass]="{ 'current-section': currentSection === 'work4' }"> 
           <ly-icon ly-list-icon disablePadding>filter_4</ly-icon>
-          <span ly-line>Engg @ Smith&Tinker</span>
+          <span ly-line> @ Smith & Tinker</span>
         </button>
         <button ly-list-item (click)="scrollTo('work5')" [ngClass]="{ 'current-section': currentSection === 'work5' }">
           <ly-icon ly-list-icon disablePadding>filter_5</ly-icon>
-          <span ly-line>Engg @ Big Bang</span>
+          <span ly-line> @ Big Bang</span>
         </button>
         <button ly-list-item (click)="scrollTo('work6')" [ngClass]="{ 'current-section': currentSection === 'work6' }">
           <ly-icon ly-list-icon disablePadding>filter_6</ly-icon>
-          <span ly-line>Engg @ HB Studios</span>
+          <span ly-line> @ HB Studios</span>
         </button>
       </ly-list>
       <div [className]="classes.icon">
@@ -64,42 +64,45 @@
     </ly-drawer>
 
     <ly-drawer-content [withClass]="classes.drawerContent">
-      <div id="parentDiv" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)" style="height: 100vh; overflow-y: scroll;">
+      <div id="parentDiv" scrollSpy [spiedTags]="['DIV']" (sectionChange)="onSectionChange($event)" style="height: 85vh; overflow-y: scroll;">
         <div id="section1">
           <a href="#section1" prevent-default="" scroll-to="section1">Overview</a><br/><br/>
-          <detailbox blob="section1"></detailbox><br/><br/>
+          <detailbox detailtype="overview"></detailbox><br/><br/>
         </div>
         <div id="section2">
           <a href="#section2" prevent-default="" scroll-to="section2">Skills</a><br/><br/>
-          <detailbox blob="section2"></detailbox><br/><br/>
+          <detailbox detailtype="skills"></detailbox><br/><br/>
         </div>
         <div id="section3">
           <a href="#section3" prevent-default="" scroll-to="section3">Education</a><br/><br/>
-          <detailbox blob="section3"></detailbox><br/><br/>
+          <detailbox detailtype="education"></detailbox><br/><br/>
         </div>
         <div id="work1">
-          <a href="#work1" prevent-default="" scroll-to="work1">AI Engineer - Hardsuit Labs</a><br/><br/>
-          <detailbox blob="work1"></detailbox><br/><br/>
+          <a href="#work1" prevent-default="" scroll-to="work1">Hardsuit Labs</a><br/><br/>
+          <detailbox detailtype="workhsl"></detailbox><br/><br/>
         </div>
         <div id="work2">
-          <a href="#work2" prevent-default="" scroll-to="work2">Engineer - Harebrained Schemes</a><br/><br/>
-          <detailbox blob="work2"></detailbox><br/><br/>
+          <a href="#work2" prevent-default="" scroll-to="work2">Harebrained Schemes</a><br/><br/>
+          <detailbox detailtype="workhbs"></detailbox><br/><br/>
         </div>
         <div id="work3">
-          <a href="#work3" prevent-default="" scroll-to="work3">Engineer</a><br/><br/>
-          <detailbox blob="work3"></detailbox><br/><br/>
+          <a href="#work3" prevent-default="" scroll-to="work3">343 Industries</a><br/><br/>
+          <detailbox detailtype="workthree"></detailbox><br/><br/>
         </div>
         <div id="work4">
-          <a href="#work4" prevent-default="" scroll-to="work4">Engineer</a><br/><br/>
-          <detailbox blob="work4"></detailbox><br/><br/>
+          <a href="#work4" prevent-default="" scroll-to="work4">Smith & Tinker</a><br/><br/>
+          <detailbox detailtype="worksmith"></detailbox><br/><br/>
         </div>
         <div id="work5">
-          <a href="#work5" prevent-default="" scroll-to="work5">Engineer</a><br/><br/>
-          <detailbox blob="work5"></detailbox><br/><br/>
+          <a href="#work5" prevent-default="" scroll-to="work5">Big Bang Entertainment, Flying Lab Software</a><br/><br/>
+          <detailbox detailtype="workbang"></detailbox><br/><br/>
         </div>
         <div id="work6">
-          <a href="#work6" prevent-default="" scroll-to="work6">Engineer</a><br/><br/>
-          <detailbox blob="work6"></detailbox><br/><br/>
+          <a href="#work6" prevent-default="" scroll-to="work6">HB Studios</a><br/><br/>
+          <detailbox detailtype="workhb"></detailbox><br/><br/>
+        </div>
+        <div style="height: 800px;" >
+          <a href="#section1" prevent-default="" scroll-to="section1">Back To Top</a><br/>
         </div>
       </div>  
     </ly-drawer-content>

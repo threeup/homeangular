@@ -8,7 +8,7 @@ const MINI = '56px over@XSmall';
 
 const STYLES = ({
   drawerContainer: {
-    height: '800px',
+    height: 'calc(100vh - 70px)',
     transform: 'translate3d(0,0,0)'
   },
   drawerContent: {

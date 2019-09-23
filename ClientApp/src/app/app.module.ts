@@ -35,10 +35,9 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
-import { DragonResumeComponent } from './dragonresume/dragonresume.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ScrollSpyDirective } from './scrollspy/scrollspy.directive';
-import { DetailsComponent } from './details/details.component';
+import { DetailBoxComponent } from './detailbox/detailbox.component';
 import { LyDrawerModule } from '@alyle/ui/drawer';
 import { LyToolbarModule } from '@alyle/ui/toolbar';
 import { LyListModule } from '@alyle/ui/list';
@@ -70,11 +69,10 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
   declarations: [
     AppComponent, 
     ScrollSpyDirective, 
-    DetailsComponent,
+    DetailBoxComponent,
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    DragonResumeComponent,
     FetchDataComponent
   ],
   imports: [
@@ -86,7 +84,6 @@ import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
-      { path: 'dragonresume', component: DragonResumeComponent },
       { path: 'fetch-data', component: FetchDataComponent },
     ]),
     LoggerModule.forRoot({serverLoggingUrl: '/api/logs', level: NgxLoggerLevel.DEBUG, serverLogLevel: NgxLoggerLevel.ERROR}),
