@@ -31,14 +31,13 @@ export class DetailBoxComponent implements OnInit {
 
         this.content += "<strong>Masters of Science, Computer Science</strong><em>  - University of Washington</em><br/>\n";
         this.content += "<em>2017 - 2019</em>, Seattle, WA, USA<br/>\n";
-        this.content += "Machine Learning, Natual Language<br/>\n";
+        this.content += "• Machine Learning • Natual Language<br/>\n";
         this.content += "<strong>Bachelors of Science, Software Engineering with Internship</strong><em>  - University of Calgary</em><br/>\n";
         this.content += "2002 - 2007, Calgary, AB, Canada<br/>\n";
-        this.content += "Mechanics, Calculus, Signals, Embedded System, Web Development, Gesture VR<br/>\n";
+        this.content += "• Mechanics • Calculus • Signals • Embedded System • Web Development • Gesture VR<br/>\n";
         break;
 
       case "workhsl":
-        this.content += "<strong>AI Engineer</strong>\n";
         this.content += "<em>August 2016 - PRESENT</em>, Seattle, WA, USA<br/>\n";
         this.content += "Developed Vampire the Masquerade Bloodlines 2<br/>\n";
         this.content += "• Mentored handful of Junior Engineers focusing on the basics of real-time AI <br/>\n";
@@ -48,7 +47,6 @@ export class DetailBoxComponent implements OnInit {
         this.content += "• Fast world sampling to determine good combat placement. <br/>\n";
         break;
       case "workhbs":
-        this.content += "<strong>Software Engineer</strong>\n";
         this.content += "<em>September 2012 - August 2016</em>, Kirkland, WA, USA<br/>\n";
         this.content += "Developed Shadowrun Returns series<br/>\n";
         this.content += "• Implemented C# core architecture including pathfinding, bitwise collision, and critical loop <br/>\n";
@@ -57,7 +55,6 @@ export class DetailBoxComponent implements OnInit {
         break;
 
       case "workthree":
-        this.content += "<strong>Software Engineer Contract</strong>\n";
         this.content += "<em>September 2012 - August 2016</em>, Kirkland, WA, USA<br/>\n";
         this.content += "Developed Halo 4<br/>\n";
         this.content += "• Implemented some of the code for front end screens and components <br/>\n";
@@ -66,7 +63,6 @@ export class DetailBoxComponent implements OnInit {
         break;
 
       case "worksmith":
-        this.content += "<strong>Software Engineer</strong>\n";
         this.content += "<em>January 2012 - April 2012</em>, Seattle, WA, USA<br/>\n";
         this.content += "Developed unreleased third person shooter for iOS <br/>\n";
         this.content += "• Implemented cover-to-cover movement like TimeCrisis light gun style <br/>\n";
@@ -77,7 +73,6 @@ export class DetailBoxComponent implements OnInit {
         break;
 
       case "workbang":
-        this.content += "<strong>Software Engineer</strong>\n";
         this.content += "<em>September 2009 - January 2012</em>, Phoenix, AZ and Seattle, WA, USA<br/>\n";
         this.content += "Developed Pirate's Plunder, 6 player pirate game for Free Realms MMO. <br/>\n";
         this.content += "• Focused on physics and gameplay, specifically various boat-in-water motion scenarios, hand-written collision reactions<br/>\n";
@@ -89,7 +84,6 @@ export class DetailBoxComponent implements OnInit {
         this.content += "• Revamping in-game point of sale system and interface, improved memory management, deferred workload and other optimizations to make a PC game playable on console <br/>\n";
         break;
       case "workhb":
-        this.content += "<strong>Software Engineer</strong>\n";
         this.content += "<em>January 2008 - September 2009</em>, Halifax, NS, Canada<br/>\n";
         this.content += "Developed NBA Live 09 for Wii<br/>\n";
         this.content += "• Generated new pointer-based GUI using C++ and Actionscript with an OO focus <br/>\n";
