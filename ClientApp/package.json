@@ -27,7 +27,7 @@
     "bootstrap": "^4.3.1",
     "chroma-js": "^2.0.6",
     "core-js": "^2.6.5",
-    "jquery": "3.4.1",
+    "jquery": "3.5.0",
     "ngx-logger": "^4.0.5",
     "oidc-client": "^1.9.0-beta.4",
     "popper.js": "^1.14.3",
